@@ -5,9 +5,14 @@ buildscript {
 	repositories {
 		mavenCentral()
 	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+dependencies {
+    ...
+    compile "org.springframework:spring-beans:$springVersion"
+    compile "org.springframework:spring-jdbc:$springVersion"
+    compile "org.springframework:spring-web:$springVersion"
+
+    compile "org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE"
+}
 }
 
 plugins {
